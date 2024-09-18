@@ -3,6 +3,7 @@ package frm.utn.entidades;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @Getter
 @Setter
@@ -12,6 +13,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "domicilio ")
+@Audited
 public class Domicilio implements Serializable {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)

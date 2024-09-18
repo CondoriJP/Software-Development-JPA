@@ -3,6 +3,7 @@ package frm.utn.entidades;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @Getter
 @Setter
@@ -11,6 +12,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "detalle_factura")
+@Audited
 public class DetalleFactura implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
